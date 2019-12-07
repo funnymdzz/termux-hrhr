@@ -12,6 +12,4 @@ jobs:
           fetch-depth: 2
       - name: run docker container
         uses: docker://termux:termux-builder
-        run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        run: echo hrhr
