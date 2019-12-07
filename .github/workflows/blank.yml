@@ -3,10 +3,10 @@ name: CI
 on: push
 
 jobs:
-  my-job:
+
     name: Build
     steps:
       - name: run docker container
         uses: docker://termux:termux-builder
-        name: hrhr
-        run echo hrhr
+      - name: hrhr
+        run: echo hrhr
