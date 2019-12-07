@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: docker://termux:package-builder
+    - uses: docker://termux/package-builder
     - name: termux
       run: echo Hello, world!
     - name: Run a multi-line script
