@@ -8,10 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: docker://termux:termux-builder
+    - uses: docker://termux:package-builder
     - name: termux
       run: echo Hello, world!
     - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: ./build-package.sh bash
