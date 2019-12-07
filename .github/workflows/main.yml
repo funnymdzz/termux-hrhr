@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: termux/packages-builder
+    container: termux/package-builder
 
     steps:
     - name: termux
