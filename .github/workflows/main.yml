@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: termux
-      run: ls /home && cd /home/builder/termux-packages/ && ls && ./build-package.sh bash
+      run: ls /home/builder/ && /home/builder/termux-packages/build-package.sh bash
