@@ -5,11 +5,9 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    container: 
+     image: termux/packages-builder
 
     steps:
-    - uses: docker://termux/package-builder
     - name: termux
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: ls && ls /home
+      run: ls
