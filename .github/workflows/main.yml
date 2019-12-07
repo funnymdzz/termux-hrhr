@@ -12,4 +12,4 @@ jobs:
     - name: termux
       run: echo Hello, world!
     - name: Run a multi-line script
-      run: ./build-package.sh bash
+      run: cd /home/builder && ls && ./build-package.sh bash
