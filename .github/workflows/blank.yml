@@ -1,0 +1,16 @@
+name: CI
+
+on: push
+
+jobs:
+  my-job:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+      - name: run docker container
+        uses: docker://termux:termux-builder
+        echo Add other actions to build,
+        echo test, and deploy your project.
