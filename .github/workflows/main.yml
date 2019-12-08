@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: termux
-      run: sudo git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && su builder && cd /home/builder/termux-packages.sh && sudo bash build-package.sh bash
+      run: sudo git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && cd /home/builder/termux-packages.sh && sudo bash build-package.sh bash
