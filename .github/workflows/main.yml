@@ -12,7 +12,7 @@ jobs:
     - name: installing ndk
       run: cd $HOME/termux-packages && sudo bash ./scripts/setup-ubuntu.sh && sudo bash ./scripts/setup-android-sdk.sh
     - name: building 
-      run: cd $HOME/termux-packages && sudo bash ./build-package.sh bash
+      run: cd $HOME/termux-packages && sudo bash ./build-package.sh busybox
     - name : Upload packages
       uses: actions/upload-artifact@master
       with:
