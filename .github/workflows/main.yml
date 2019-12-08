@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-    image: termux/package-builder
-    env:
-        USER: builder
+              image: termux/package-builder
+              env:
+                 USER: builder
 
     steps:
     - name: termux
