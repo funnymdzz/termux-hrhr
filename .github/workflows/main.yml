@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - name: cloning repository
-      run: git clone https://github.com/funnymdzz/termux-hrhr $HOME/termux-packages --depth=1 
+      run: sudo apt upgrade -y && git clone https://github.com/funnymdzz/termux-hrhr $HOME/termux-packages
     - name: installing ndk
       run: cd $HOME/termux-packages && sudo bash ./scripts/setup-ubuntu.sh && sudo bash ./scripts/setup-android-sdk.sh
     - name: building 
