@@ -5,8 +5,11 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: termux/package-builder
+    container:
+    image: termux/package-builder
+    env:
+        USER: builder
 
     steps:
     - name: termux
-      run: sudo git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && cd /home/builder/termux-packages && sudo bash build-package.sh bash
+      run: sudo git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && cd /home/builder/termux-packages && bash build-package.sh bash
