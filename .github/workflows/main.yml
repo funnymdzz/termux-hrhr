@@ -8,4 +8,4 @@ jobs:
 
     steps:
     - name: termux
-      run: sudo git clone https://github.com/funnymdzz/termux-hrhr --depth=1 && cd termux-packages && sudo bash ./scripts/setup-ubuntu.sh && sudo bash ./scripts/setup-android-sdk.sh && sudo ./build-package.sh bash
+      run: sudo git clone https://github.com/funnymdzz/termux-hrhr termux-packages --depth=1 && cd termux-packages && sudo bash ./scripts/setup-ubuntu.sh && sudo bash ./scripts/setup-android-sdk.sh && sudo ./build-package.sh zsh
