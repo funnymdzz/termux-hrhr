@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: termux
-      run: ls /home/builder/termux-packages && bash /home/builder/termux-packages/build-package.sh bash
+      run: apt install git -y && git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && bash /home/builder/termux-packages/build-package.sh bash
