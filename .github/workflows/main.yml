@@ -9,7 +9,8 @@ jobs:
               image: termux/package-builder
               env:
                  USER: builder
+                 HOME: /home/builder
 
     steps:
     - name: termux
-      run: sudo git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && cd /home/builder/termux-packages && bash build-package.sh bash
+      run: cd && ls && git clone https://github.com/termux/termux-packages /home/builder/termux-packages --depth=1 && cd /home/builder/termux-packages && ./build-package.sh bash
