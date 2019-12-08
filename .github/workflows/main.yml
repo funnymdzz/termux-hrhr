@@ -12,9 +12,9 @@ jobs:
     - name: installing ndk
       run: cd $HOME/termux-packages && sudo bash ./scripts/setup-ubuntu.sh && sudo bash ./scripts/setup-android-sdk.sh
     - name: building 
-      run: cd $HOME/termux-packages && sudo bash ./build-package.sh busybox
+      run: mkdir -p /home/runner/work/termux-hrhr/termux-hrhr/debs && cd $HOME/termux-packages && sudo bash ./build-package.sh busybox && cp -r $HOME/termux-packages/debs/* /home/runner/work/termux-hrhr/termux-hrhr/debs
     - name : Upload packages
       uses: actions/upload-artifact@master
       with:
         name: debs
-        path: $HOME/termux-packages/debs
+        path: debs
